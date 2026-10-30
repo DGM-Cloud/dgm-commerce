@@ -1,0 +1,46 @@
+{
+  "name": "dgm-commerce",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "smoke:admin": "node scripts/smoke-admin-query.mjs",
+    "images:upload": "node scripts/upload-catalog-images-to-imgbb.mjs",
+    "images:upload:sql": "node scripts/upload-catalog-images-to-imgbb.mjs --write-sql",
+    "images:upload:rewrite": "node scripts/upload-catalog-images-to-imgbb.mjs --write-sql --rewrite-products",
+    "images:apply:supabase": "node scripts/apply-inventory-image-urls-to-supabase.mjs"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@supabase/supabase-js": "^2.78.0",
+    "@tanstack/query-sync-storage-persister": "^5.105.0",
+    "@tanstack/react-query": "^5.105.0",
+    "@tanstack/react-query-persist-client": "^5.105.0",
+    "currency.js": "^2.0.4",
+    "next": "^15.1.11",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0",
+    "styled-components": "^6.1.13",
+    "swiper": "^11.2.1",
+    "ubigeo-peru": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/styled-components": "^5.1.34",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

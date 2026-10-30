@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables de color para tema elegante */
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --accent: #000000;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --store-nav-bg: #000000;
+  --store-nav-fg: #ffffff;
+  --store-footer-bg: #09090b;
+  --store-footer-fg: #ffffff;
+  --store-chrome-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --store-chrome-sans: var(--font-manrope), system-ui, sans-serif;
+  --store-nav-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --store-nav-sans: var(--font-manrope), system-ui, sans-serif;
+  --store-footer-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --store-footer-sans: var(--font-manrope), system-ui, sans-serif;
+  --store-logo-font: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --store-logo-size: 1.35rem;
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+}
+
+/* Reset y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans), Georgia, serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+}
+
+.font-sans {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+select,
+option {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+/* Utilidades personalizadas */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+}
